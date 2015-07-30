@@ -102,13 +102,20 @@ class Altlab_Cdf_Shortcode_Admin {
 
 
 
-
-
-
-
+	/**
+	 * Available shortcodes
+	 *
+	 * @since    1.0.0
+	 */
 
 	public function shortcodes(){
 
+
+	/**
+	 * The cdf shortcode
+	 *
+	 * @since    1.0.0
+	 */
 
 		function cdf_func( $atts ) {
 		    $a = shortcode_atts( array(
@@ -128,8 +135,6 @@ cdf.embed('{$a['cdf']}', {$a['width']}, {$a['height']});
 ";
 		}
 		add_shortcode( 'wcdf', 'cdf_func' );
-
-
 
 	}
 
