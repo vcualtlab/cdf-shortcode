@@ -114,6 +114,8 @@ class Altlab_Cdf_Shortcode_Admin {
 		    $a = shortcode_atts( array(
 		        'cdf' => '',
 		        'image' => '',
+		        'width' => '824',
+		        'height' => '652'
 		    ), $atts );
 
 		    return "
@@ -121,7 +123,7 @@ class Altlab_Cdf_Shortcode_Admin {
 <script type='text/javascript'>
 var cdf = new cdfplugin();
 cdf.setDefaultContent('<a href=http://www.wolfram.com/cdf-player/><img  src={$a['image']}></a>');
-cdf.embed('{$a['cdf']}', 824, 652);
+cdf.embed('{$a['cdf']}', {$a['width']}, {$a['height']});
 </script>
 ";
 		}
